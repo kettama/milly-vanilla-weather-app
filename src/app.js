@@ -114,13 +114,11 @@ function handleSubmit(event) {
 
 function displayFarenheitTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  celsiusLink.classList.remove("active");
-  o8;
-  farenheitLink.classList.add("active");
   let farenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(farenheitTemperature);
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
 }
 
 function displayCelsiusTemperature(event) {
@@ -140,4 +138,4 @@ farenheitLink.addEventListener("click", displayFarenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-search("Paris");
+search("Dublin City");
